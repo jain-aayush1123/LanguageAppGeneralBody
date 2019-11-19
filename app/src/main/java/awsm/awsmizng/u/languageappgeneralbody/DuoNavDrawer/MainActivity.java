@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import awsm.awsmizng.u.languageappgeneralbody.BlankFragment;
+import awsm.awsmizng.u.languageappgeneralbody.HomeFragment;
 import awsm.awsmizng.u.languageappgeneralbody.R;
 import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
 import nl.psdcompany.duonavigationdrawer.views.DuoMenuView;
@@ -38,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         // Handle drawer actions
         handleDrawer();
         // Show main fragment in container
-        goToFragment(new BlankFragment(), false);
+        goToFragment(new HomeFragment(), false);
         mMenuAdapter.setViewSelected(0, true);
         setTitle(mTitles.get(0));
         //TODO can play with footer view/ header view here
@@ -85,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         if (addToBackStack) {
             transaction.addToBackStack(null);
         }
-        transaction.add(R.id.container, fragment).commit();
+        transaction.replace(R.id.container, fragment).commit();
     }
     
     @Override
@@ -96,6 +97,9 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         mMenuAdapter.setViewSelected(position, true);
         // Navigate to the right fragment
         switch (position) {
+            case 0:
+                goToFragment(new HomeFragment(), false);
+                break;
             default:
                 goToFragment(new BlankFragment(), false);
                 break;
