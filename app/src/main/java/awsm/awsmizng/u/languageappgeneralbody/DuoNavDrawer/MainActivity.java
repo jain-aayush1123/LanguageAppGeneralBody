@@ -13,6 +13,7 @@ import androidx.fragment.app.FragmentTransaction;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import awsm.awsmizng.u.languageappgeneralbody.AppCreditsFragment;
 import awsm.awsmizng.u.languageappgeneralbody.BlankFragment;
 import awsm.awsmizng.u.languageappgeneralbody.HomeFragment;
 import awsm.awsmizng.u.languageappgeneralbody.R;
@@ -99,6 +100,9 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
         switch (position) {
             case 0:
                 goToFragment(new HomeFragment(), false);
+                break;
+            case 1:
+                goToFragment(new AppCreditsFragment(), false);
                 break;
             default:
                 goToFragment(new BlankFragment(), false);
