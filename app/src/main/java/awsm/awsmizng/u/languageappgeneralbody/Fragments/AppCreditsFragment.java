@@ -1,4 +1,4 @@
-package awsm.awsmizng.u.languageappgeneralbody;
+package awsm.awsmizng.u.languageappgeneralbody.Fragments;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -11,6 +11,8 @@ import android.view.ViewAnimationUtils;
 import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
+
+import awsm.awsmizng.u.languageappgeneralbody.R;
 
 /**
  * A simple {@link Fragment} subclass.

@@ -5,4 +5,8 @@
     <color name="colorPrimary">#F64668</color>
     <color name="colorAccent">#FE9677</color>
     <color name="colorWhite">#FFFFFF</color>
+
+    <color name="colorProfileBlueLight">#4859a7</color>
+    <color name="colorProfileBlueDark">#384886</color>
+
 </resources>

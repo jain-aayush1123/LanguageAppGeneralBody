@@ -13,9 +13,10 @@ import androidx.fragment.app.FragmentTransaction;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import awsm.awsmizng.u.languageappgeneralbody.AppCreditsFragment;
-import awsm.awsmizng.u.languageappgeneralbody.BlankFragment;
-import awsm.awsmizng.u.languageappgeneralbody.HomeFragment;
+import awsm.awsmizng.u.languageappgeneralbody.Fragments.AppCreditsFragment;
+import awsm.awsmizng.u.languageappgeneralbody.Fragments.BlankFragment;
+import awsm.awsmizng.u.languageappgeneralbody.Fragments.HomeFragment;
+import awsm.awsmizng.u.languageappgeneralbody.Fragments.ProfileFragment;
 import awsm.awsmizng.u.languageappgeneralbody.R;
 import nl.psdcompany.duonavigationdrawer.views.DuoDrawerLayout;
 import nl.psdcompany.duonavigationdrawer.views.DuoMenuView;
@@ -79,7 +80,7 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
     
     @Override
     public void onHeaderClicked() {
-        Toast.makeText(this, "onHeaderClicked", Toast.LENGTH_SHORT).show();
+        goToFragment(new ProfileFragment(), false);
     }
     
     private void goToFragment(Fragment fragment, boolean addToBackStack) {
@@ -102,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements DuoMenuView.OnMen
                 goToFragment(new HomeFragment(), false);
                 break;
             case 1:
+                goToFragment(new ProfileFragment(), false);
+                break;
+            case 2:
                 goToFragment(new AppCreditsFragment(), false);
                 break;
             default:

@@ -4,9 +4,9 @@
     <array name="menuOptions">
         <item>Home</item>
         <item>Profile</item>
+        <item>App Credits</item>
         <item>Feedback</item>
         <item>Bugs</item>
-        <item>App Credits</item>
         <item>Settings</item>
     </array>
 
